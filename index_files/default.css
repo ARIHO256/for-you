@@ -77,8 +77,8 @@ a {
 }
 
 .say {
-    color: white;       /* romantic deep pink/red */
-    font-size: 24px;      /* bigger text */
+    color: black;       /* romantic deep pink/red */
+    font-size: 2rem;      /* bigger text */
     font-family: 'Georgia', serif; /* elegant font */
     line-height: 1.6;
     font-weight: 600; 
