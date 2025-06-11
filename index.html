@@ -16,12 +16,9 @@
     <script type="text/javascript" src="./index_files/love.js" charset="utf-8"></script>
     <script type="text/javascript" src="./config.js"></script>
     <style type="text/css">
-        <!--
         .STYLE1 {
             color: #666666
         }
-
-        -->
     </style>
 </head>
 <body>
@@ -30,6 +27,55 @@
 <audio class="song-audio-autoplay" controls loop style="display: none;visibility: hidden">
     <source src="./index_files/music.mp3" type="audio/mp3"/>
 </audio>
+
+<div class="lyrics-container">
+    <h2 class="lyrics-title">Do You Ever Cross Your Mind</h2>
+    <div class="lyrics-text">
+        Sometimes I go walkin' through the fields<br>
+        Where we walked<br>
+        Long ago in the sweet used-to-be<br>
+        And the flowers still grow<br>
+        But they don't smell as sweet<br>
+        As they did when you picked them for me<br><br>
+        
+        And when I think of you<br>
+        And the love we once knew<br>
+        How I wish we could go back in time<br>
+        Do you ever think back on old mem'ries like that<br>
+        Or do I ever cross your mind?<br><br>
+        
+        Do you ever wake up lonely<br>
+        In the middle of the night<br>
+        Because you miss me, do you darlin'<br>
+        Oh and do your mem'ries ever take you back<br>
+        Into another place in time<br>
+        And do you ever miss the feelings and the love<br>
+        We shared when you were with me, do you darlin'<br>
+        I just wonder do I cross your mind<br><br>
+        
+        Oh how often I wish that again I could kiss<br>
+        Your sweet lips like I did long ago<br>
+        How often I long for those two lovin' arms<br>
+        That once held me so gentle and close<br><br>
+        
+        And when I think of you and the love we once knew<br>
+        How I wish we could go back in time<br>
+        Do you ever recall these old mem'ries at all<br>
+        Or do I ever cross your mind<br><br>
+        
+        Do you ever wake up lonely<br>
+        In the middle of the night<br>
+        Because you miss me, do you darlin'<br>
+        Oh and do your mem'ries ever take you back<br>
+        Into another place in time<br>
+        And do you ever miss the feelings and the love<br>
+        We shared when you were with me, do you darlin'<br>
+        I just wonder do I cross your mind<br><br>
+        
+        Oh, do I ever cross your mind
+    </div>
+</div>
+
 <style type="text/css">
     .rotateImages{
         -webkit-animation:myRotate 10s linear infinite;
@@ -58,13 +104,11 @@
             </div>
         </div>
         <div id="clock-box">
-                    <span id="clock-box-inside-text">
-					</span>
+            <span id="clock-box-inside-text"></span>
             <div id="clock"></div>
         </div>
         <canvas id="canvas" width="1100" height="680"></canvas>
     </div>
-
 </div>
 
 <script type="text/javascript">
@@ -73,7 +117,6 @@
                 <span class="say"> </span><br>`;
     }).reduce((a, b) => a + b, ''));
 </script>
-
 
 <script>
 (function () {
@@ -213,8 +256,7 @@
 })();
 </script>
 
-
-<<style>
+<style>
 body {
     margin: 0;
     padding: 0;
@@ -224,13 +266,129 @@ body {
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    font-size: 14px;
-    font-family: 'Arial', 'Verdana', sans-serif;
-    color: #231F20;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #fff;
     overflow: auto;
+    line-height: 1.6;
 }
 
-/</style>
+/* Lyrics container styling */
+.lyrics-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    pointer-events: none;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    
+    backdrop-filter: blur(2px);
+}
+
+.lyrics-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.lyrics-text {
+    max-width: 800px;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    
+    line-height: 1.8;
+}
+
+/* Main content styling */
+#main {
+    position: relative;
+    z-index: 1;
+}
+
+#wrap {
+    position: relative;
+    width: 1100px;
+    height: 680px;
+    margin: 0 auto;
+}
+
+#text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+#code {
+    font-size: 1.1rem;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    padding: 20px;
+}
+
+.say {
+    display: inline-block;
+    margin: 5px 0;
+}
+
+#clock-box {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .lyrics-container {
+        padding: 10px;
+    }
+    
+    .lyrics-title {
+        font-size: 1.8rem;
+    }
+    
+    .lyrics-text {
+        font-size: 1rem;
+    }
+    
+    #wrap {
+        width: 100%;
+        height: auto;
+    }
+    
+    #code {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animation for text appearance */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.lyrics-text {
+    animation: fadeIn 1.5s ease-out forwards;
+}
+</style>
 
 </body>
 </html>
