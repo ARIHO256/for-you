@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -14,115 +15,86 @@
     <script type="text/javascript" src="./index_files/jscex-async-powerpack.min.js"></script>
     <script type="text/javascript" src="./index_files/functions.js" charset="utf-8"></script>
     <script type="text/javascript" src="./index_files/love.js" charset="utf-8"></script>
-    <script type="text/javascript" src="./config.js"></script>
-    <style type="text/css">
-        .STYLE1 {
-            color: #666666
+
+    <style>
+        body {
+            background-image: url(rose2.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .message-box {
+            font-size: 2rem;
+            color:green;
+            font-family: Ubuntu Mono;
+            padding: 20px;
+            margin: 20px auto;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            line-height: 1.6;
+
+        }
+
+        .rotateImages {
+            -webkit-animation: myRotate 10s linear infinite;
+            animation: myRotate 10s linear infinite;
+        }
+
+        @-webkit-keyframes myRotate {
+            0% { -webkit-transform: rotate(0deg); }
+            50% { -webkit-transform: rotate(180deg); }
+            100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes myRotate {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(180deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
 <body>
+    <div class="message-box">
+                Sometimes I go walkin' through the fields. Where we walked Long ago in the sweet used-to-be  
+                And the flowers still grow. But they don't smell as sweet .As they did when you picked them for me. And when I think of you  
+                And the love we once knew  
+                How I wish we could go back in time  
+                Do you ever think back on old mem'ries like that  
+                Or do I ever cross your mind?                                  
+            </div>
 
-<img src="https://ajlovechina.github.io/loveBalloon/static/music.png" style="position: fixed;z-index: 10001;top:10px;right:10px;" onclick="let m = document.querySelector('.song-audio-autoplay'); if (m.paused ) {m.play(); this.className = 'rotateImages'} else {m.pause(); this.className = ''}">
-<audio class="song-audio-autoplay" controls loop style="display: none;visibility: hidden">
+<img src="https://ajlovechina.github.io/loveBalloon/static/music.png" 
+     style="position: fixed; z-index: 10001; top:10px; right:10px;" 
+     onclick="let m = document.querySelector('.song-audio-autoplay'); 
+              if (m.paused ) {m.play(); this.className = 'rotateImages'} 
+              else {m.pause(); this.className = ''}">
+<audio class="song-audio-autoplay" controls loop style="display: none; visibility: hidden">
     <source src="./index_files/music.mp3" type="audio/mp3"/>
 </audio>
 
-<div class="lyrics-container">
-    <h2 class="lyrics-title">Do You Ever Cross Your Mind</h2>
-    <div class="lyrics-text">
-        Sometimes I go walkin' through the fields<br>
-        Where we walked<br>
-        Long ago in the sweet used-to-be<br>
-        And the flowers still grow<br>
-        But they don't smell as sweet<br>
-        As they did when you picked them for me<br><br>
-        
-        And when I think of you<br>
-        And the love we once knew<br>
-        How I wish we could go back in time<br>
-        Do you ever think back on old mem'ries like that<br>
-        Or do I ever cross your mind?<br><br>
-        
-        Do you ever wake up lonely<br>
-        In the middle of the night<br>
-        Because you miss me, do you darlin'<br>
-        Oh and do your mem'ries ever take you back<br>
-        Into another place in time<br>
-        And do you ever miss the feelings and the love<br>
-        We shared when you were with me, do you darlin'<br>
-        I just wonder do I cross your mind<br><br>
-        
-        Oh how often I wish that again I could kiss<br>
-        Your sweet lips like I did long ago<br>
-        How often I long for those two lovin' arms<br>
-        That once held me so gentle and close<br><br>
-        
-        And when I think of you and the love we once knew<br>
-        How I wish we could go back in time<br>
-        Do you ever recall these old mem'ries at all<br>
-        Or do I ever cross your mind<br><br>
-        
-        Do you ever wake up lonely<br>
-        In the middle of the night<br>
-        Because you miss me, do you darlin'<br>
-        Oh and do your mem'ries ever take you back<br>
-        Into another place in time<br>
-        And do you ever miss the feelings and the love<br>
-        We shared when you were with me, do you darlin'<br>
-        I just wonder do I cross your mind<br><br>
-        
-        Oh, do I ever cross your mind
-    </div>
-</div>
-
-<style type="text/css">
-    .rotateImages{
-        -webkit-animation:myRotate 10s linear infinite;
-        animation:myRotate 10s linear infinite;
-    }
-    @-webkit-keyframes myRotate{
-        0%{ -webkit-transform: rotate(0deg);}
-        50%{ -webkit-transform: rotate(180deg);}
-        100%{ -webkit-transform: rotate(360deg);}
-    }
-    @keyframes myRotate{
-        0%{ -webkit-transform: rotate(0deg);}
-        50%{ -webkit-transform: rotate(180deg);}
-        100%{ -webkit-transform: rotate(360deg);}
-    }
-</style>
-
 <div id="main">
-    <div id="error">本页面采用HTML5编辑，目前您的浏览器无法显示，请换成谷歌(<a
-            href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a
-            href="http://firefox.com.cn/download/">Firefox</a>)浏览器，或者其他游览器的最新版本。
-    </div>
+    <div id="error">Your browser doesn't support HTML5. Please use Chrome, Firefox, or an updated browser.</div>
     <div id="wrap">
+        
         <div id="text">
-            <div id="code">
-            </div>
+            
+            
         </div>
         <div id="clock-box">
-            <span id="clock-box-inside-text"></span>
+            <div id="clock-box-inside-text"></div>
             <div id="clock"></div>
         </div>
         <canvas id="canvas" width="1100" height="680"></canvas>
     </div>
 </div>
 
-<script type="text/javascript">
-    $('#code').html(config.lines.map(item => {
-        return `<span class="say">${item}</span><br>
-                <span class="say"> </span><br>`;
-    }).reduce((a, b) => a + b, ''));
-</script>
-
 <script>
 (function () {
     var canvas = $('#canvas');
 
-    // Check if canvas is supported
     if (!canvas[0].getContext) {
         $("#error").show();
         return false;
@@ -137,7 +109,7 @@
     var options = {
         seed: {
             x: width / 2 - 20,
-            color: "rgb(190, 26, 37)", // red color for the seed (heart)
+            color: "rgb(190, 26, 37)",
             scale: 2
         },
         branch: [
@@ -161,19 +133,19 @@
         bloom: {
             num: 700,
             width: 1080,
-            height: 650,
+            height: 650
         },
         footer: {
             width: 1200,
             height: 5,
-            speed: 10,
+            speed: 10
         }
     };
 
     var tree = new Tree(canvas[0], width, height, options);
     var seed = tree.seed;
     var foot = tree.footer;
-    var hold = 0; // Start animation immediately (no click needed)
+    var hold = 0;
 
     var seedAnimation = eval(Jscex.compile("async", function () {
         seed.draw();
@@ -213,8 +185,6 @@
         }
         foot.draw();
         tree.snapshot("p2", 500, 0, 610, 680);
-
-        // Flickering may occur, this is done as a last resort (＞﹏＜)
         canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
         canvas.css("background", "#ffe");
         $await(Jscex.Async.sleep(300));
@@ -231,164 +201,17 @@
         }
     }));
 
-    var textAnimation = eval(Jscex.compile("async", function () {
-        var together = new Date(config.date);
-
-        $("#code").show().typewriter();
-        $("#clock-box").fadeIn(500);
-        while (true) {
-            timeElapse(together);
-            $await(Jscex.Async.sleep(1000));
-        }
-    }));
-
     var runAsync = eval(Jscex.compile("async", function () {
         $await(seedAnimation());
         $await(growAnimation());
         $await(bloomAnimation());
         $await(moveAnimation());
-
-        textAnimation().start();
         $await(jumpAnimation());
     }));
 
     runAsync().start();
 })();
 </script>
-
-<style>
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #ffe;
-    background-image: url(rose3.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    font-family: 'Georgia', 'Times New Roman', serif;
-    color: #fff;
-    overflow: auto;
-    line-height: 1.6;
-}
-
-/* Lyrics container styling */
-.lyrics-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    pointer-events: none;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
-    
-    backdrop-filter: blur(2px);
-}
-
-.lyrics-title {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-weight: 300;
-    letter-spacing: 1px;
-}
-
-.lyrics-text {
-    max-width: 800px;
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.9);
-    
-    line-height: 1.8;
-}
-
-/* Main content styling */
-#main {
-    position: relative;
-    z-index: 1;
-}
-
-#wrap {
-    position: relative;
-    width: 1100px;
-    height: 680px;
-    margin: 0 auto;
-}
-
-#text {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-}
-
-#code {
-    font-size: 1.1rem;
-    color: #fff;
-    text-shadow: 1px 1px 2px #000;
-    padding: 20px;
-}
-
-.say {
-    display: inline-block;
-    margin: 5px 0;
-}
-
-#clock-box {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1001;
-    color: #fff;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-    font-size: 1.2rem;
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 10px 20px;
-    border-radius: 20px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .lyrics-container {
-        padding: 10px;
-    }
-    
-    .lyrics-title {
-        font-size: 1.8rem;
-    }
-    
-    .lyrics-text {
-        font-size: 1rem;
-    }
-    
-    #wrap {
-        width: 100%;
-        height: auto;
-    }
-    
-    #code {
-        font-size: 0.9rem;
-    }
-}
-
-/* Animation for text appearance */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.lyrics-text {
-    animation: fadeIn 1.5s ease-out forwards;
-}
-</style>
 
 </body>
 </html>
