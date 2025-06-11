@@ -130,24 +130,7 @@
     var tree = new Tree(canvas[0], width, height, options);
     var seed = tree.seed;
     var foot = tree.footer;
-    var hold = 1;
-
-    canvas.click(function (e) {
-        var offset = canvas.offset(), x, y;
-        x = e.pageX - offset.left;
-        y = e.pageY - offset.top;
-        if (seed.hover(x, y)) {
-            hold = 0;
-            canvas.unbind("click");
-            canvas.unbind("mousemove");
-            canvas.removeClass('hand');
-        }
-    }).mousemove(function (e) {
-        var offset = canvas.offset(), x, y;
-        x = e.pageX - offset.left;
-        y = e.pageY - offset.top;
-        canvas.toggleClass('hand', seed.hover(x, y));
-    });
+    var hold = 0; // Start animation immediately (no click needed)
 
     var seedAnimation = eval(Jscex.compile("async", function () {
         seed.draw();
@@ -223,13 +206,13 @@
         $await(moveAnimation());
 
         textAnimation().start();
-
         $await(jumpAnimation());
     }));
 
     runAsync().start();
 })();
 </script>
+
 
 <<style>
 body {
